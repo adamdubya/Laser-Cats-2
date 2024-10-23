@@ -3,19 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="T-Shirts with Cats with frickin lasters shooting out of their eyes.">
+    <meta name="description" content="Shop unique and vibrant t-shirts, shoes, and jackets featuring playful cats shooting lasers from their eyes. Explore our quirky designs and unleash your bold style today!">
     <meta name="keywords" content="Cats, Lasers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home - Shirts</title>
-    <!-- 
-    Why it's bad:
-        Generic "Home" tag: Leading with "Home" adds no value and doesn't describe what the page or store is about.
-        Keyword stuffing: Overloading it with too many generic keywords like "Buy Cool Stuff Online" without focusing on what makes the store unique.
-        No branding focus: The main focus (Laser Cats' unique product) is not clearly defined.
-        Too long: The title is unnecessarily long, which can get cut off in search results.     
-    -->
-    <!-- Laser Cats T-Shirts - Playful Tees with Laser-Eyed Cats -->
+    <title>Laser Cats T-Shirts - Playful Tees with Laser-Eyed Cats - Cat GIFs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,18 +19,31 @@
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyLoadDivs = document.querySelectorAll('.hero__items');
 
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let div = entry.target;
+                    let bgImage = div.getAttribute('data-setbg');
+                    if (bgImage) {
+                    div.style.backgroundImage = `url(${bgImage})`;
+                    observer.unobserve(div); // Stop observing once loaded
+                    }
+                }
+                });
+            });
 
+            lazyLoadDivs.forEach(div => {
+                observer.observe(div);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -45,19 +54,16 @@
 
     <div id="consentBox">
         
-        <div id="consentContent">
-            <header id="consentHeader">
-                &#127850;&#127850;&#127850;  Cookies &#127850;&#127850;&#127850;
-              </header>
+        <div id="consentContent">        
             <p>
-                We use cookies to enhance your experience. By using our site, you agree to this.
+                We use cookies and other technologies to enhance your browsing experience, analyze usage, research, and deliver personalized advertising. To manage your consent and tracking preferences, please <a href="#">click here</a>. For more information on how we collect, use, and protect your personal data, please review our <a href="#">privacy policy</a>.
             </p>
             <div class="buttons">
                 <button class="consentButton">
-                      OK!
+                      Accept All
                   </button>
                 <button class="rejectButton">
-                      No, like really, it's totally OK!
+                     Reject All
                   </button>
             </div>
         </div>
@@ -102,26 +108,18 @@
                         <a href="./index.html">Laser <span>Cats</span></a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-7 col-md-7">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">About Us</a></li>
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
+                            <li class="active"><a href="./index.html">Cat T-Shirts</a></li>
+                            <li><a href="./shop.html">Cat Jackets </a></li>
+                            <li><a href="#">Cat Shoes</a></li>
+                            <li><a href="./blog.html">Accessories</a></li>
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-2 col-md-2">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                         <a href="#"><img src="img/icon/heart.png" alt=""></a>
@@ -138,47 +136,9 @@
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__items set-bg" data-setbg="img/hero/hero-1.png">
-                <!-- <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                                <div class="hero__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+            <div class="hero__items set-bg" data-setbg="img/hero/hero-1.webp">
             </div>
             <div class="hero__items set-bg" data-setbg="img/hero/hero-2.webp">
-                <!-- <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-7 col-md-8">
-                            <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</p>
-                                <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                                <div class="hero__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -191,10 +151,10 @@
                 <div class="col-lg-7 offset-lg-4">
                     <div class="banner__item">
                         <div class="banner__item__pic">
-                            <img src="img/banner/tshirt-5.jpg" alt="">
+                            <img src="img/banner/tshirt-5.webp" style="width: 440px; height: 660px;" loading="lazy" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>2024 Collection</h2>
+                            <h2>2024 Cat T-Shirts Collection</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -202,10 +162,10 @@
                 <div class="col-lg-5">
                     <div class="banner__item banner__item--middle">
                         <div class="banner__item__pic">
-                            <img src="img/banner/tshirt-10.jpg" alt="">
+                            <img src="img/banner/tshirt-10.webp" style="width: 440px; height: 660px;" loading="lazy" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Sale</h2>
+                            <h2>Laser Cat Apparel Sale</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -213,10 +173,10 @@
                 <div class="col-lg-7">
                     <div class="banner__item banner__item--last">
                         <div class="banner__item__pic">
-                            <img src="img/banner/cat-shoe.webp"  style="width: 440px;" alt="">
+                            <img src="img/banner/cat-shoe.webp"  style="width: 440px; height: 440px;" loading="lazy" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Fall Collection Shoes</h2>
+                            <h2>Fall Laser Cat Shoes</h2>
                             <a href="#">Shop now</a>
                         </div>
                     </div>
@@ -237,7 +197,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories__hot__deal">
-                        <img src="img/product-sale.webp" style="width: 360px;" alt="">
+                        <img src="img/product-sale.webp" style="width: 360px;" loading="lazy" alt="">
                         <div class="hot__deal__sticker">
                             <span>Sale!</span>
                             <h5>$99.99</h5>
@@ -247,7 +207,7 @@
                 <div class="col-lg-4 offset-lg-1">
                     <div class="categories__deal__countdown">
                         <span>Deal Of The Week</span>
-                        <h2>Retro Jacket</h2>
+                        <h2>Laser Cat Retro Jacket</h2>
                         <div class="categories__deal__countdown__timer" id="countdown">
                             <div class="cd-item">
                                 <span>5</span>
@@ -312,7 +272,7 @@
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.webp" style="width: 360px;"></div>
                         <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 16 February 2024</span>
+                            <span><img src="img/icon/calendar.png" alt=""> October 2, 2024</span>
                             <h5>Why Cats with Lasers Are the Ultimate Fashion Statement (And How to Rock It)</h5>
                             <a href="#">Read More</a>
                         </div>
@@ -322,7 +282,7 @@
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-hero.jpg" style="width: 360px;"></div>
                         <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 21 February 2024</span>
+                            <span><img src="img/icon/calendar.png" alt=""> October 16, 2024</span>
                             <h5>How Laser Cats Can Unleash Your Inner Superhero - One T-Shirt at a Time</h5>
                             <a href="#">Read More</a>
                         </div>
@@ -332,7 +292,7 @@
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.webp" style="width: 360px;"></div>
                         <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 28 February 2024</span>
+                            <span><img src="img/icon/calendar.png" alt=""> October 21, 2024</span>
                             <h5>The Science Behind Laser-Eyed Cats: Spoiler, It's 100% Fashionable</h5>
                             <a href="#">Read More</a>
                         </div>
@@ -421,14 +381,10 @@
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

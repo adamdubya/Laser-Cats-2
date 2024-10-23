@@ -91,13 +91,13 @@ input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-	outline: none;
+	/*outline: none;*/
 }
 
 a:hover,
 a:focus {
 	text-decoration: none;
-	outline: none;
+	/*outline: none;*/
 	color: #ffffff;
 }
 
@@ -426,7 +426,7 @@ ol {
 .header__menu ul li {
 	list-style: none;
 	display: inline-block;
-	margin-right: 45px;
+	margin-right: 25px;
 	position: relative;
 }
 
@@ -555,6 +555,11 @@ ol {
   Hero
 -----------------------*/
 
+.hero {
+	min-height: 800px;
+	content-visibility: auto;
+}
+
 .hero__slider.owl-carousel .owl-item.active .hero__text h6 {
 	top: 0;
 	opacity: 1;
@@ -593,6 +598,7 @@ ol {
 .hero__items {
 	height: 800px;
 	padding-top: 230px;
+	content-visibility: auto;
 }
 
 .hero__text h6 {
