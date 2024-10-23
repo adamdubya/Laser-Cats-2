@@ -3942,3 +3942,13 @@ ol {
     font-weight: 600;
     margin-top: 10px;
 }
+
+.ai-seo {
+	padding: 50px 0;
+}
+
+.ai-seo h1 {
+	font-family: "Chewy", system-ui;
+	font-size: 48px;
+	color: #ff1397;
+}
